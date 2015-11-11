@@ -22,6 +22,7 @@ implements OnClickListener{
 	private int noCorrect;
 	private int noAnswered;
 	private int noQuestions = 3;
+	private QuizApplication application;
 	
     /** Called when the activity is first created. */
     @Override
@@ -29,6 +30,7 @@ implements OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.multichoice);
         Log.i("MCQ", "MultiChoice starts");
+        application = (QuizApplication) this.getApplication();
         opts = (RadioGroup) findViewById(R.id.opts);
         Button sub = (Button) findViewById(R.id.submit);
         question = (TextView) findViewById(R.id.question_text);
@@ -82,12 +84,16 @@ implements OnClickListener{
 	    			+ " attempted of " +noQuestions + " questions");
 	    }
 
-	public void onClick(View arg0) {
+	public void onClick(View arg0) {		
 		noAnswered++;
+        application.incrementQuestionsAttempted();
 		int id;
 		id = opts.getCheckedRadioButtonId();
-		if( currentQuestion.isCorrect(id))
+		if( currentQuestion.isCorrect(id)){
+			System.out.println(noCorrect);
 			noCorrect++;
+	        application.incrementQuestionsCorrect();
+		}
 		generateSummary();
 		if (noAnswered == noQuestions)
 			finish();

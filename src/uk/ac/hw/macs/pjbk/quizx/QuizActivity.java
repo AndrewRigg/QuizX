@@ -16,6 +16,8 @@ implements OnClickListener{
     private QuizApplication application;
     private Button historyButton;
     private Button mathsButton;
+    private Button scienceButton;
+    private Button geographyButton;
     private TextView summary;
 
     /** Called when the activity is first created. */
@@ -25,7 +27,10 @@ implements OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         application = (QuizApplication) this.getApplication();
-
+        scienceButton = (Button) findViewById(R.id.science_button);
+        scienceButton.setOnClickListener(this);
+        geographyButton = (Button) findViewById(R.id.geography_button);
+        geographyButton.setOnClickListener(this);
         historyButton = (Button) findViewById(R.id.history_button);
         historyButton.setOnClickListener(this);
         mathsButton = (Button) findViewById(R.id.maths_button);
