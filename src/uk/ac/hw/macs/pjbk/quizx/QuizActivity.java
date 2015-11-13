@@ -64,5 +64,15 @@ implements OnClickListener{
             Toast.makeText(getApplicationContext(), "Maths button pressed", Toast.LENGTH_LONG).show();
             startActivity(new Intent(this, uk.ac.hw.macs.pjbk.quizx.NumericQuestion.class));
         }
+        if ( arg0 == geographyButton ) {
+            Log.i("QUIZ", "Geography selected");
+            Toast.makeText(getApplicationContext(), "Geography button pressed", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(this, uk.ac.hw.macs.pjbk.quizx.GeographyQuestion.class));
+        }
+        if ( arg0 == scienceButton ) {
+            Log.i("QUIZ", "Science selected");
+            Toast.makeText(getApplicationContext(), "Science button pressed", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(this, uk.ac.hw.macs.pjbk.quizx.ScienceQuestion.class));
+        }
     }
 }

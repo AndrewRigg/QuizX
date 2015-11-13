@@ -22,12 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".NumericQuestion"
-            ></activity>
-           <activity
-            android:name=".MultiChoiceQuestionsActivity"
-            ></activity>
+        <activity android:name=".NumericQuestion"/>
+        <activity android:name=".ScienceQuestion"/>
+        <activity android:name=".GeographyQuestion"/>
+        <activity android:name=".MultiChoiceQuestionsActivity"/>
+        <activity android:name=".ReadXMLFile"/>
    </application>
 
 </manifest>

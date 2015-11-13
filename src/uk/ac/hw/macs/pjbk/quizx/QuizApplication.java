@@ -1,17 +1,24 @@
 package uk.ac.hw.macs.pjbk.quizx;
 
 import android.app.Application;
+import android.content.Context;
 import android.util.Log;
 
 
 public class QuizApplication extends Application {
-    @Override
+
+    private static Context context;
     public void onCreate()
     {
             super.onCreate();
             Log.i("QUIZ", "Started");
+            QuizApplication.context = getApplicationContext();
     }
 
+    public static Context getAppContext(){
+    	return QuizApplication.context;
+    }
+    
     @Override
     public void onTerminate()
     {
