@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<questions title="Geography">
+ <question>
+ <ask>
+What river separates France and Germany for a large part of its course?
+ </ask>
+<answer>
+Rhone
+</answer>
+<answer correct="true">
+Rhine
+</answer>
+<answer>
+Danube
+</answer>
+<answer>
+Loire
+</answer>
+<answer>
+Thames
+</answer>
+ </question>
+ <question>
+ <ask>
+What is the capital city of Spain?
+ </ask>
+<answer correct="true">
+Madrid
+</answer>
+<answer>
+Paris
+</answer>
+<answer>
+Berlin
+</answer>
+<answer>
+Lisbon
+</answer>
+ </question>
+ <question>
+ <ask>
+Where is the Mekong river mouth?
+ </ask>
+<answer correct="true">
+Vietnam
+</answer>
+<answer>
+Thailand
+</answer>
+<answer>
+China
+</answer>
+<answer>
+Burma
+</answer>
+ </question>
+ <question>
+ <ask>
+Which strait separates Alaska and Siberia?
+ </ask>
+<answer correct="true">
+Bering Strait
+</answer>
+<answer>
+Torres Strait
+</answer>
+<answer>
+Cook Strait
+</answer>
+<answer>
+Mallaca Strait
+</answer>
+ </question>
+</questions>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<questions title="Science">
+ <question>
+ <ask>
+Which chemical element has symbol Pb?
+ </ask>
+<answer>
+Plubium
+</answer>
+<answer correct="true">
+Lead
+</answer>
+<answer>
+Fallacium
+</answer>
+<answer>
+Einsteinium
+</answer>
+<answer>
+Thaladium
+</answer>
+ </question>
+ <question>
+ <ask>
+What is the speed of light?
+ </ask>
+<answer correct="true">
+3x10^8m/s
+</answer>
+<answer>
+Infinite
+</answer>
+<answer>
+3x10^8mph
+</answer>
+<answer>
+Unknown
+</answer>
+ </question>
+ <question>
+ <ask>
+In particle physics, what does QED stand for?
+ </ask>
+<answer correct="true">
+Quantum Electodynamics
+</answer>
+<answer>
+Quod Erat Demonstrandum
+</answer>
+<answer>
+Quixotic Energy Dynamics
+</answer>
+<answer>
+Quickly Evanescing Diatom
+</answer>
+ </question>
+ <question>
+ <ask>
+Which of the following is not a DNA base?
+ </ask>
+<answer correct="true">
+Uracil
+</answer>
+<answer>
+Cytosine</answer>
+<answer>
+Adenine
+</answer>
+<answer>
+Thymine
+</answer>
+ </question>
+</questions>

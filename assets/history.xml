@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<questions title="History">
+ <question>
+ <ask>
+Who won the Battle of Hastings?
+ </ask>
+<answer>
+Harold Godwinson</answer>
+<answer correct="true">
+William of Normandy
+</answer>
+<answer>
+Edward the Confessor
+</answer>
+<answer>
+Harald Hadrada
+</answer>
+ </question>
+ <question>
+ <ask>
+Who won the Battle of Waterloo?
+ </ask>
+<answer correct="true">
+Wellington
+</answer>
+<answer>
+Napoleon
+</answer>
+<answer>
+Blucher
+</answer>
+<answer>
+Marlborough
+</answer>
+ </question>
+ <question>
+ <ask>
+Who was the first Roman emperor?
+ </ask>
+<answer correct="true">
+Augustus
+</answer>
+<answer>
+Julius Caesar
+</answer>
+<answer>
+Nero
+</answer>
+<answer>
+Trajan
+</answer>
+ </question>
+ <question>
+ <ask>
+Which Roman emperor built a wall across Scotland?
+ </ask>
+<answer correct="true">
+Antonius
+</answer>
+<answer>
+Hadrian
+</answer>
+<answer>
+Trajan
+</answer>
+<answer>
+Constantine
+</answer>
+ </question>
+</questions>
