@@ -1,8 +1,15 @@
 package uk.ac.hw.macs.pjbk.quizx;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Vector;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+import org.xml.sax.helpers.DefaultHandler;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -19,7 +26,8 @@ implements OnClickListener{
 	private TextView question;
 	private TextView summary;
 	private InputStream xmlFile;
-	private SAXParser xmlReader;
+	private SAXQuizParser xmlReader;
+	private SAXQuizHandler handler;
 	private Vector<MCQuestion> questions;
 	private RadioGroup opts;
 	private MCQuestion currentQuestion;
@@ -39,7 +47,7 @@ implements OnClickListener{
         }catch (IOException e){
         	System.err.println(e);
         }
-        SAXParser.parse(xmlFile);
+        SAXQuizParser.parse(xmlFile);
         Log.i("MCQ", "MultiChoice starts");
         application = (QuizApplication) this.getApplication();
         opts = (RadioGroup) findViewById(R.id.opts);
@@ -68,15 +76,29 @@ implements OnClickListener{
 	}
 	
 	private void initialiseQuestions() {
+	/*
+		try {
+			SAXParserFactory factory = SAXParserFactory.newInstance();
+		    InputStream    xmlInput  = new FileInputStream("geography.xml");
+		    SAXParser      saxParser = factory.newSAXParser();
+		    DefaultHandler handler   = new SAXQuizHandler();
+		    saxParser.parse(xmlInput, handler);
+		    ((SAXQuizHandler) handler).seeElements();
+			} catch (Throwable err) {
+			    err.printStackTrace ();
+			}
+		*/
+		//questions = (Vector<MCQuestion>) xmlReader.getSAXHandler().getQuestions();
+		//questions = SAXQuizHandler.getQuestions();
+		//MCQuestion q =  SAXQuizParser.parse(xmlFile);
 		questions = new Vector<MCQuestion>();
-		//String st =  SAXParser.parse(xmlFile);
-		xmlReader = new SAXParser();
-		
-		MCQuestion q1 = new MCQuestion(xmlReader.toString());
-		//q1.addAnswer(xmlFile.toString(),false);
-		//q1.addAnswer(st, false);
-		//q1.addAnswer(SAXParser.parse(xmlFile).get(0).getAnswer(0), false);
-		q1.addAnswer(xmlReader.toString(), false);
+		xmlReader = new SAXQuizParser();
+		questions = xmlReader.getHandler().getQuestions();
+		System.out.println("questions: " + questions);
+		//questions.add(currentQuestion);
+		//MCQuestion q1 = new MCQuestion(xmlReader.toString());
+		//q1.addAnswer(q1.getQuestion().toString(), true);
+		/*q1.addAnswer(xmlReader.toString(), false);
 		q1.addAnswer("G1", false);
 		q1.addAnswer("G2", false);
 		q1.addAnswer("G3", true);
@@ -93,7 +115,7 @@ implements OnClickListener{
 		q1.addAnswer("Edmund Hillary", false);
 		q1.addAnswer("Robert Peary", false);
 		questions.add(q1);	
-		// more questions could be added
+		// more questions could be added*/
 		}
 	
 	   private void generateSummary()

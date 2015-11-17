@@ -1,5 +1,4 @@
 package uk.ac.hw.macs.pjbk.quizx;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,9 +27,18 @@ public class MCQuestion {
 		return answers.get(i-1);
 	}
 	
-	public String[] getAnswers()
+	public void setQuestion(String question) {
+		this.question = question;
+	}
+	
+	public void setAnswer(String answer) {
+		answers.add(answer);
+	}
+	
+	public String [] getAnswers()
 	{
 		return answers.toArray(new String[1]);
+		//return answers.get(answers.size()-1);
 	}
 	public boolean isCorrect( int i)
 	{ 
